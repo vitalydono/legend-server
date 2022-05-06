@@ -7,8 +7,8 @@ const port = process.env.PORT || 5000;
 const server = http.createServer(app);
 
 // connect to mongodb
-const dbURI =
-  "mongodb+srv://vitalydono:labc121003@cluster0.cextq.mongodb.net/mobile-game?retryWrites=true&w=majority";
+const dbURI = process.env.MONGO_URL
+
 
 mongoose
   .connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
